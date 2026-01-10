@@ -1,124 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Hugo Rodrigues | Desenvolvedor & Gestor</title>
+    <title>João Hugo Rodrigues | Currículo Tech</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #0d1117; color: #c9d1d9; line-height: 1.6; min-height: 100vh; }
-        h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #58a6ff; }
-        .section-title { border-bottom: 2px solid #21262d; padding-bottom: 0.5rem; margin-bottom: 1.5rem; color: #58a6ff; text-transform: uppercase; letter-spacing: 0.1em; font-size: 1.1rem; font-weight: 700; margin-top: 2.5rem; }
-        .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 0.5rem; padding: 1.5rem; transition: all 0.3s ease; height: 100%; }
-        .card:hover { border-color: #58a6ff; transform: translateY(-2px); }
-        .highlight-text { color: #d97706; font-weight: 600; }
-        .badge { background-color: #21262d; color: #58a6ff; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 600; border: 1px solid #30363d; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #0d1117; 
+            color: #c9d1d9; 
+        }
+        .card { 
+            background-color: #161b22; 
+            border: 1px solid #30363d; 
+            transition: all 0.3s ease; 
+        }
+        .card:hover { 
+            border-color: #58a6ff; 
+        }
     </style>
 </head>
-<body class="p-4 md:p-12">
+<body class="p-6 md:p-12">
 
-    <div class="max-w-4xl mx-auto pb-20">
+    <div class="max-w-4xl mx-auto space-y-10">
 
-        <header class="text-center pb-8 border-b border-gray-800">
-            <h1 class="text-3xl md:text-5xl font-bold mb-2 text-white">João Hugo Rodrigues</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-light italic">Desenvolvedor em Formação | Gestor de Operações</p>
-            
-            <div class="mt-6 text-sm flex justify-center flex-wrap gap-x-6 gap-y-3 font-mono text-center">
-                <a href="https://wa.me/5511986566850" target="_blank" class="flex items-center gap-2 hover:text-green-400 transition">
-                    <span class="text-green-500">📞</span> (11) 98656-6850
-                </a>
-                <a href="mailto:jhugo085@gmail.com" target="_blank" class="flex items-center gap-2 hover:text-red-400 transition">
-                    <span class="text-red-400">✉️</span> jhugo085@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/joaohugorodrigues" target="_blank" class="flex items-center gap-2 hover:text-blue-400 transition">
-                    <span class="text-blue-400">🔗</span> LinkedIn
-                </a>
-                <a href="https://github.com/joaohugorodrigues" target="_blank" class="flex items-center gap-2 hover:text-white transition">
-                    <span class="text-white">🐙</span> GitHub
-                </a>
+        <header class="text-center border-b border-gray-800 pb-8">
+            <h1 class="text-4xl font-bold text-white">João Hugo Rodrigues</h1>
+            <p class="text-xl text-blue-400">Desenvolvedor em Formação | Gestor de Operações</p>
+            <div class="flex justify-center gap-6 mt-4 text-sm flex-wrap">
+                <a href="https://wa.me/5511986566850" class="hover:text-green-400">📞 (11) 98656-6850</a>
+                <a href="mailto:jhugo085@gmail.com" class="hover:text-red-400">📧 jhugo085@gmail.com</a>
+                <a href="https://www.linkedin.com/in/joaohugorodrigues" class="hover:text-blue-400">🔗 LinkedIn</a>
+                <a href="https://github.com/joaohugorodrigues" class="hover:text-white">🐙 GitHub</a>
             </div>
-            <p class="text-[10px] text-gray-500 mt-6 uppercase tracking-[0.3em]">Nascido em 24/03/1995 • São Paulo, SP</p>
         </header>
 
-        <section class="block mt-10">
-            <h2 class="section-title">Sobre Mim</h2>
-            <p class="text-sm md:text-base text-gray-300">
-                Especialista em Gestão de Operações com mais de 10 anos de atuação em gigantes como <span class="text-white font-semibold">Outback Steakhouse</span> e <span class="text-white font-semibold">McDonald's</span>. Atualmente no 2º semestre de <span class="highlight-text">Análise e Desenvolvimento de Sistemas</span>, unindo maturidade profissional e liderança estratégica ao desenvolvimento de softwares modernos e funcionais.
-            </p>
+        <section>
+            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Sobre Mim</h2>
+            <p>Mais de 10 anos de experiência em gestão de operações no <strong>Outback Steakhouse</strong> e <strong>McDonald's</strong>. Atualmente cursando o 2º semestre de Análise e Desenvolvimento de Sistemas, unindo liderança estratégica com tecnologia.</p>
         </section>
 
-        <section class="block mt-10">
-            <h2 class="section-title">Projetos em Tecnologia</h2>
+        <section>
+            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-6">Projetos em Tecnologia</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="card flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <h3 class="font-bold text-white uppercase text-sm">Âmbar & Brasa</h3>
-                            <span class="badge">Commercial</span>
-                        </div>
-                        <p class="text-xs text-gray-400 mb-6">Landing page e cardápio digital dinâmico com foco em UI/UX Premium e conversão via WhatsApp.</p>
-                    </div>
-                    <a href="https://joaohugorodrigues.github.io/Ambar-Brasa-Steakhouse/" target="_blank" class="w-full text-center bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded text-[10px] font-bold uppercase tracking-wider transition">
-                        Acessar Projeto 🚀
-                    </a>
+                <div class="card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-white font-bold text-xl mb-2">Âmbar & Brasa</h3>
+                    <p class="text-gray-400 text-sm mb-4">Cardápio digital de alta conversão para steakhouse premium.</p>
+                    <a href="https://joaohugorodrigues.github.io/Ambar-Brasa-Steakhouse/" target="_blank" class="bg-amber-600 text-white px-4 py-2 rounded text-xs font-bold hover:bg-amber-700 inline-block">Ver Projeto 🚀</a>
                 </div>
 
-                <div class="card flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <h3 class="font-bold text-white uppercase text-sm">ONG Conecta</h3>
-                            <span class="badge">Social</span>
-                        </div>
-                        <p class="text-xs text-gray-400 mb-6">Plataforma institucional para impacto social, conexão de comunidades e transparência.</p>
-                    </div>
-                    <a href="https://joaohugorodrigues.github.io/ONG-CONECTA-/" target="_blank" class="w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded text-[10px] font-bold uppercase tracking-wider transition">
-                        Acessar Projeto 🌍
-                    </a>
+                <div class="card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-white font-bold text-xl mb-2">ONG Conecta</h3>
+                    <p class="text-gray-400 text-sm mb-4">Plataforma institucional para conexão e impacto social.</p>
+                    <a href="https://joaohugorodrigues.github.io/ONG-CONECTA-/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded text-xs font-bold hover:bg-blue-700 inline-block">Ver Projeto 🌍</a>
                 </div>
             </div>
         </section>
 
-        <section class="block mt-10">
-            <h2 class="section-title">Trajetória Profissional</h2>
+        <section>
+            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Experiência Profissional</h2>
             <div class="space-y-4">
-                <div class="card border-l-4 border-l-blue-500 bg-[#1c2128]">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-sm font-bold text-white uppercase">OUTBACK STEAKHOUSE</h3>
-                        <span class="text-[9px] text-gray-500 font-mono">2021 – 2024</span>
-                    </div>
-                    <p class="text-[10px] text-blue-400 mb-2 uppercase tracking-widest font-bold">Coordenador de Plantão</p>
-                    <p class="text-xs text-gray-400 leading-relaxed italic">Gestão de alta performance, análise diária de KPIs operacionais e coordenação de fluxos lógicos em ambiente de alta demanda.</p>
+                <div class="card p-4 rounded-lg">
+                    <h4 class="text-white font-bold">Outback Steakhouse</h4>
+                    <p class="text-blue-400 text-xs">Coordenador de Plantão | 2021 – 2024</p>
+                    <p class="text-gray-400 text-sm mt-2 italic">Gestão de alta performance e análise de KPIs operacionais.</p>
                 </div>
-
-                <div class="card border-l-4 border-l-gray-500 bg-[#1c2128]">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-sm font-bold text-white uppercase">MC DONALD'S</h3>
-                        <span class="text-[9px] text-gray-500 font-mono">2014 – 2021</span>
-                    </div>
-                    <p class="text-[10px] text-gray-400 mb-2 uppercase tracking-widest font-bold">Líder de Loja</p>
-                    <p class="text-xs text-gray-400 leading-relaxed italic">Padronização de processos globais, treinamento de equipes e Troubleshooting técnico em terminais de venda.</p>
+                <div class="card p-4 rounded-lg">
+                    <h4 class="text-white font-bold">Mc Donald's (Arcos Dourados)</h4>
+                    <p class="text-blue-400 text-xs">Líder de Loja | 2014 – 2021</p>
+                    <p class="text-gray-400 text-sm mt-2 italic">Gestão de pessoas e padronização de processos globais.</p>
                 </div>
             </div>
         </section>
-
-        <section class="block mt-10">
-            <h2 class="section-title">Stack Técnica & Habilidades</h2>
-            <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-                <span class="badge bg-[#1c2128]">HTML5 / CSS3</span>
-                <span class="badge bg-[#1c2128]">Tailwind CSS</span>
-                <span class="badge bg-[#1c2128]">JavaScript (Learning)</span>
-                <span class="badge bg-[#1c2128]">Git / GitHub</span>
-                <span class="badge bg-[#1c2128]">Gestão de KPIs</span>
-                <span class="badge bg-[#1c2128]">Metodologias Ágeis</span>
-                <span class="badge bg-[#1c2128]">ADS 2º Semestre</span>
-            </div>
-        </section>
-
-        <footer class="text-center text-gray-600 text-[9px] mt-16 pt-8 border-t border-gray-800 uppercase tracking-[0.3em]">
-            <p>João Hugo Rodrigues • Code • Management • 2026</p>
-        </footer>
 
     </div>
+
 </body>
 </html>
