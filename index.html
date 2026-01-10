@@ -20,11 +20,20 @@
         .card:hover { 
             border-color: #58a6ff; 
         }
+        .skill-badge {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            color: #58a6ff;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body class="p-6 md:p-12">
 
-    <div class="max-w-4xl mx-auto space-y-10">
+    <div class="max-w-4xl mx-auto space-y-10 pb-20">
 
         <header class="text-center border-b border-gray-800 pb-8">
             <h1 class="text-4xl font-bold text-white">João Hugo Rodrigues</h1>
@@ -35,6 +44,7 @@
                 <a href="https://www.linkedin.com/in/joaohugorodrigues" class="hover:text-blue-400">🔗 LinkedIn</a>
                 <a href="https://github.com/joaohugorodrigues" class="hover:text-white">🐙 GitHub</a>
             </div>
+            <p class="text-[10px] text-gray-500 mt-4 uppercase tracking-widest font-mono">Nascido em 24/03/1995 • São Paulo, SP</p>
         </header>
 
         <section>
@@ -42,16 +52,56 @@
             <p>Mais de 10 anos de experiência em gestão de operações no <strong>Outback Steakhouse</strong> e <strong>McDonald's</strong>. Atualmente cursando o 2º semestre de Análise e Desenvolvimento de Sistemas, unindo liderança estratégica com tecnologia.</p>
         </section>
 
+        <section class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Hard Skills</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge">HTML5 / CSS3</span>
+                    <span class="skill-badge">Tailwind CSS</span>
+                    <span class="skill-badge">JavaScript (Basic)</span>
+                    <span class="skill-badge">Git / GitHub</span>
+                    <span class="skill-badge">Gestão de KPIs</span>
+                    <span class="skill-badge">Análise de Sistemas</span>
+                    <span class="skill-badge">Pacote Office Avançado</span>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Soft Skills</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge font-normal text-white italic">Liderança de Equipes</span>
+                    <span class="skill-badge font-normal text-white italic">Inteligência Emocional</span>
+                    <span class="skill-badge font-normal text-white italic">Resolução de Conflitos</span>
+                    <span class="skill-badge font-normal text-white italic">Comunicação Assertiva</span>
+                    <span class="skill-badge font-normal text-white italic">Adaptabilidade</span>
+                    <span class="skill-badge font-normal text-white italic">Pensamento Analítico</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Idiomas</h2>
+            <div class="flex gap-4">
+                <div class="card p-3 rounded flex-1 text-center">
+                    <p class="text-white font-bold">Inglês</p>
+                    <p class="text-blue-400 text-xs">Intermediário</p>
+                </div>
+                <div class="card p-3 rounded flex-1 text-center">
+                    <p class="text-white font-bold">Espanhol</p>
+                    <p class="text-blue-400 text-xs">Básico</p>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-6">Projetos em Tecnologia</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="card p-6 rounded-lg shadow-xl">
+                <div class="card p-6 rounded-lg shadow-xl border-amber-600/30">
                     <h3 class="text-white font-bold text-xl mb-2">Âmbar & Brasa</h3>
                     <p class="text-gray-400 text-sm mb-4">Cardápio digital de alta conversão para steakhouse premium.</p>
                     <a href="https://joaohugorodrigues.github.io/Ambar-Brasa-Steakhouse/" target="_blank" class="bg-amber-600 text-white px-4 py-2 rounded text-xs font-bold hover:bg-amber-700 inline-block">Ver Projeto 🚀</a>
                 </div>
 
-                <div class="card p-6 rounded-lg shadow-xl">
+                <div class="card p-6 rounded-lg shadow-xl border-blue-600/30">
                     <h3 class="text-white font-bold text-xl mb-2">ONG Conecta</h3>
                     <p class="text-gray-400 text-sm mb-4">Plataforma institucional para conexão e impacto social.</p>
                     <a href="https://joaohugorodrigues.github.io/ONG-CONECTA-/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded text-xs font-bold hover:bg-blue-700 inline-block">Ver Projeto 🌍</a>
@@ -62,18 +112,22 @@
         <section>
             <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Experiência Profissional</h2>
             <div class="space-y-4">
-                <div class="card p-4 rounded-lg">
-                    <h4 class="text-white font-bold">Outback Steakhouse</h4>
-                    <p class="text-blue-400 text-xs">Coordenador de Plantão | 2021 – 2024</p>
+                <div class="card p-4 rounded-lg border-l-4 border-l-blue-500">
+                    <h4 class="text-white font-bold uppercase">Outback Steakhouse</h4>
+                    <p class="text-blue-400 text-xs font-bold">Coordenador de Plantão | 2021 – 2024</p>
                     <p class="text-gray-400 text-sm mt-2 italic">Gestão de alta performance e análise de KPIs operacionais.</p>
                 </div>
-                <div class="card p-4 rounded-lg">
-                    <h4 class="text-white font-bold">Mc Donald's (Arcos Dourados)</h4>
-                    <p class="text-blue-400 text-xs">Líder de Loja | 2014 – 2021</p>
+                <div class="card p-4 rounded-lg border-l-4 border-l-gray-500">
+                    <h4 class="text-white font-bold uppercase">Mc Donald's (Arcos Dourados)</h4>
+                    <p class="text-blue-400 text-xs font-bold">Líder de Loja | 2014 – 2021</p>
                     <p class="text-gray-400 text-sm mt-2 italic">Gestão de pessoas e padronização de processos globais.</p>
                 </div>
             </div>
         </section>
+
+        <footer class="text-center text-gray-600 text-[10px] uppercase tracking-widest py-8">
+            João Hugo Rodrigues © 2026 • Desenvolvedor ADS
+        </footer>
 
     </div>
 
