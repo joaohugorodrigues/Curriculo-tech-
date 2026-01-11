@@ -7,28 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background-color: #0d1117; 
-            color: #c9d1d9; 
-        }
-        .card { 
-            background-color: #161b22; 
-            border: 1px solid #30363d; 
-            transition: all 0.3s ease; 
-        }
-        .card:hover { 
-            border-color: #58a6ff; 
-        }
-        .skill-badge {
-            background-color: #21262d;
-            border: 1px solid #30363d;
-            color: #58a6ff;
-            padding: 4px 12px;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
+        body { font-family: 'Poppins', sans-serif; background-color: #0d1117; color: #c9d1d9; }
+        .card { background-color: #161b22; border: 1px solid #30363d; transition: all 0.3s ease; }
+        .card:hover { border-color: #58a6ff; }
+        .skill-badge { background-color: #21262d; border: 1px solid #30363d; color: #58a6ff; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -39,18 +21,20 @@
             <h1 class="text-4xl font-bold text-white">João Hugo Rodrigues</h1>
             <p class="text-xl text-blue-400">Desenvolvedor em Formação | Gestor de Operações</p>
             <div class="flex justify-center gap-6 mt-4 text-sm flex-wrap">
-                <a href="https://wa.me/5511986566850" class="hover:text-green-400">📞 (11) 98656-6850</a>
+                <a href="https://wa.me/5511986566850" target="_blank" class="hover:text-green-400">📞 (11) 98656-6850</a>
                 <a href="mailto:jhugo085@gmail.com" class="hover:text-red-400">📧 jhugo085@gmail.com</a>
-                <a href="https://www.linkedin.com/in/joaohugorodrigues" class="hover:text-blue-400">🔗 LinkedIn</a>
-                <a href="https://github.com/joaohugorodrigues" class="hover:text-white">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/joaohugorodrigues" target="_blank" class="hover:text-blue-400">🔗 LinkedIn</a>
+                <a href="https://github.com/joaohugorodrigues" target="_blank" class="hover:text-white">🐙 GitHub</a>
             </div>
-            <p class="text-[10px] text-gray-500 mt-4 uppercase tracking-widest font-mono">Nascido em 24/03/1995 • São Paulo, SP</p>
         </header>
 
-        <section>
-            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Sobre Mim</h2>
-            <p>Mais de 10 anos de experiência em gestão de operações no <strong>Outback Steakhouse</strong> e <strong>McDonald's</strong>. Atualmente cursando o 2º semestre de Análise e Desenvolvimento de Sistemas, unindo liderança estratégica com tecnologia.</p>
-        </section>
+        <div class="p-6 bg-amber-900/10 border border-amber-900/30 rounded-lg text-center shadow-lg">
+            <h3 class="text-amber-500 font-bold mb-2">🕹️ Pausa para o lazer?</h3>
+            <p class="text-xs text-gray-400 mb-4">Desenvolvi um jogo de cobra em JavaScript puro para testar minha lógica.</p>
+            <a href="game.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded font-bold text-xs uppercase transition">
+                Jogar Pixel Snake 🐍
+            </a>
+        </div>
 
         <section class="grid md:grid-cols-2 gap-8">
             <div>
@@ -58,22 +42,17 @@
                 <div class="flex flex-wrap gap-2">
                     <span class="skill-badge">HTML5 / CSS3</span>
                     <span class="skill-badge">Tailwind CSS</span>
-                    <span class="skill-badge">JavaScript (Basic)</span>
+                    <span class="skill-badge">JavaScript</span>
                     <span class="skill-badge">Git / GitHub</span>
                     <span class="skill-badge">Gestão de KPIs</span>
-                    <span class="skill-badge">Análise de Sistemas</span>
-                    <span class="skill-badge">Pacote Office Avançado</span>
                 </div>
             </div>
             <div>
                 <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Soft Skills</h2>
-                <div class="flex flex-wrap gap-2">
-                    <span class="skill-badge font-normal text-white italic">Liderança de Equipes</span>
-                    <span class="skill-badge font-normal text-white italic">Inteligência Emocional</span>
-                    <span class="skill-badge font-normal text-white italic">Resolução de Conflitos</span>
-                    <span class="skill-badge font-normal text-white italic">Comunicação Assertiva</span>
-                    <span class="skill-badge font-normal text-white italic">Adaptabilidade</span>
-                    <span class="skill-badge font-normal text-white italic">Pensamento Analítico</span>
+                <div class="flex flex-wrap gap-2 text-white italic">
+                    <span class="skill-badge border-gray-600">Liderança de Equipes</span>
+                    <span class="skill-badge border-gray-600">Inteligência Emocional</span>
+                    <span class="skill-badge border-gray-600">Comunicação Assertiva</span>
                 </div>
             </div>
         </section>
@@ -82,54 +61,35 @@
             <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Idiomas</h2>
             <div class="flex gap-4">
                 <div class="card p-3 rounded flex-1 text-center">
-                    <p class="text-white font-bold">Inglês</p>
+                    <p class="text-white font-bold text-sm">Inglês</p>
                     <p class="text-blue-400 text-xs">Intermediário</p>
                 </div>
                 <div class="card p-3 rounded flex-1 text-center">
-                    <p class="text-white font-bold">Espanhol</p>
+                    <p class="text-white font-bold text-sm">Espanhol</p>
                     <p class="text-blue-400 text-xs">Básico</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-6">Projetos em Tecnologia</h2>
+            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-6">Projetos em Destaque</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="card p-6 rounded-lg shadow-xl border-amber-600/30">
-                    <h3 class="text-white font-bold text-xl mb-2">Âmbar & Brasa</h3>
-                    <p class="text-gray-400 text-sm mb-4">Cardápio digital de alta conversão para steakhouse premium.</p>
-                    <a href="https://joaohugorodrigues.github.io/Ambar-Brasa-Steakhouse/" target="_blank" class="bg-amber-600 text-white px-4 py-2 rounded text-xs font-bold hover:bg-amber-700 inline-block">Ver Projeto 🚀</a>
+                <div class="card p-6 rounded-lg border-amber-600/30">
+                    <h3 class="text-white font-bold mb-2">Âmbar & Brasa</h3>
+                    <p class="text-gray-400 text-xs mb-4">Landing page premium para gastronomia.</p>
+                    <a href="https://joaohugorodrigues.github.io/Ambar-Brasa-Steakhouse/" target="_blank" class="text-amber-500 text-xs font-bold underline">Ver Projeto 🚀</a>
                 </div>
-
-                <div class="card p-6 rounded-lg shadow-xl border-blue-600/30">
-                    <h3 class="text-white font-bold text-xl mb-2">ONG Conecta</h3>
-                    <p class="text-gray-400 text-sm mb-4">Plataforma institucional para conexão e impacto social.</p>
-                    <a href="https://joaohugorodrigues.github.io/ONG-CONECTA-/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded text-xs font-bold hover:bg-blue-700 inline-block">Ver Projeto 🌍</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Experiência Profissional</h2>
-            <div class="space-y-4">
-                <div class="card p-4 rounded-lg border-l-4 border-l-blue-500">
-                    <h4 class="text-white font-bold uppercase">Outback Steakhouse</h4>
-                    <p class="text-blue-400 text-xs font-bold">Coordenador de Plantão | 2021 – 2024</p>
-                    <p class="text-gray-400 text-sm mt-2 italic">Gestão de alta performance e análise de KPIs operacionais.</p>
-                </div>
-                <div class="card p-4 rounded-lg border-l-4 border-l-gray-500">
-                    <h4 class="text-white font-bold uppercase">Mc Donald's (Arcos Dourados)</h4>
-                    <p class="text-blue-400 text-xs font-bold">Líder de Loja | 2014 – 2021</p>
-                    <p class="text-gray-400 text-sm mt-2 italic">Gestão de pessoas e padronização de processos globais.</p>
+                <div class="card p-6 rounded-lg border-blue-600/30">
+                    <h3 class="text-white font-bold mb-2">ONG Conecta</h3>
+                    <p class="text-gray-400 text-xs mb-4">Impacto social e conexão institucional.</p>
+                    <a href="https://joaohugorodrigues.github.io/ONG-CONECTA-/" target="_blank" class="text-blue-400 text-xs font-bold underline">Ver Projeto 🌍</a>
                 </div>
             </div>
         </section>
 
-        <footer class="text-center text-gray-600 text-[10px] uppercase tracking-widest py-8">
-            João Hugo Rodrigues © 2026 • Desenvolvedor ADS
+        <footer class="text-center text-gray-600 text-[10px] uppercase tracking-widest pt-8">
+            João Hugo Rodrigues © 2026
         </footer>
-
     </div>
-
 </body>
 </html>
