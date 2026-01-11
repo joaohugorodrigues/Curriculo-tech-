@@ -11,6 +11,7 @@
         .card { background-color: #161b22; border: 1px solid #30363d; transition: all 0.3s ease; }
         .card:hover { border-color: #58a6ff; }
         .skill-badge { background-color: #21262d; border: 1px solid #30363d; color: #58a6ff; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+        .highlight { color: #58a6ff; font-weight: 600; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -22,19 +23,19 @@
             <p class="text-xl text-blue-400">Desenvolvedor em Formação | Gestor de Operações</p>
             <div class="flex justify-center gap-6 mt-4 text-sm flex-wrap">
                 <a href="https://wa.me/5511986566850" target="_blank" class="hover:text-green-400">📞 (11) 98656-6850</a>
-                <a href="mailto:jhugo085@gmail.com" class="hover:text-red-400">📧 jhugo085@gmail.com</a>
+                <a href="mailto:jhugo085@gmail.com" target="_blank" class="hover:text-red-400">📧 jhugo085@gmail.com</a>
                 <a href="https://www.linkedin.com/in/joaohugorodrigues" target="_blank" class="hover:text-blue-400">🔗 LinkedIn</a>
                 <a href="https://github.com/joaohugorodrigues" target="_blank" class="hover:text-white">🐙 GitHub</a>
             </div>
         </header>
 
-        <div class="p-6 bg-amber-900/10 border border-amber-900/30 rounded-lg text-center shadow-lg">
-            <h3 class="text-amber-500 font-bold mb-2">🕹️ Pausa para o lazer?</h3>
-            <p class="text-xs text-gray-400 mb-4">Desenvolvi um jogo de cobra em JavaScript puro para testar minha lógica.</p>
-            <a href="game.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded font-bold text-xs uppercase transition">
-                Jogar Pixel Snake 🐍
-            </a>
-        </div>
+        <section>
+            <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Sobre Mim</h2>
+            <p class="leading-relaxed">
+                Profissional com <span class="highlight">mais de 10 anos de sólida experiência</span> em gestão de operações e liderança de equipes em ambientes de alta performance, com passagens por grandes players como <span class="highlight">Outback Steakhouse</span> e <span class="highlight">McDonald's</span>. 
+                Atualmente, realizo minha transição de carreira para a tecnologia, cursando o 2º semestre de <span class="highlight">Análise e Desenvolvimento de Sistemas</span>. Unindo maturidade profissional, visão de negócio e raciocínio lógico para desenvolver soluções web modernas e eficientes.
+            </p>
+        </section>
 
         <section class="grid md:grid-cols-2 gap-8">
             <div>
@@ -50,23 +51,23 @@
             <div>
                 <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Soft Skills</h2>
                 <div class="flex flex-wrap gap-2 text-white italic">
-                    <span class="skill-badge border-gray-600">Liderança de Equipes</span>
+                    <span class="skill-badge border-gray-600">Liderança Estratégica</span>
                     <span class="skill-badge border-gray-600">Inteligência Emocional</span>
-                    <span class="skill-badge border-gray-600">Comunicação Assertiva</span>
+                    <span class="skill-badge border-gray-600">Resolução de Conflitos</span>
                 </div>
             </div>
         </section>
 
         <section>
             <h2 class="text-blue-400 text-lg font-bold uppercase tracking-widest border-b border-gray-800 mb-4">Idiomas</h2>
-            <div class="flex gap-4">
-                <div class="card p-3 rounded flex-1 text-center">
+            <div class="flex gap-4 text-center">
+                <div class="card p-3 rounded flex-1">
                     <p class="text-white font-bold text-sm">Inglês</p>
-                    <p class="text-blue-400 text-xs">Intermediário</p>
+                    <p class="text-blue-400 text-xs font-semibold">Intermediário</p>
                 </div>
-                <div class="card p-3 rounded flex-1 text-center">
+                <div class="card p-3 rounded flex-1">
                     <p class="text-white font-bold text-sm">Espanhol</p>
-                    <p class="text-blue-400 text-xs">Básico</p>
+                    <p class="text-blue-400 text-xs font-semibold">Básico</p>
                 </div>
             </div>
         </section>
@@ -76,20 +77,29 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="card p-6 rounded-lg border-amber-600/30">
                     <h3 class="text-white font-bold mb-2">Âmbar & Brasa</h3>
-                    <p class="text-gray-400 text-xs mb-4">Landing page premium para gastronomia.</p>
-                    <a href="https://joaohugorodrigues.github.io/Ambar-Brasa-Steakhouse/" target="_blank" class="text-amber-500 text-xs font-bold underline">Ver Projeto 🚀</a>
+                    <p class="text-gray-400 text-xs mb-4">Landing page premium para o setor gastronômico.</p>
+                    <a href="https://joaohugorodrigues.github.io/Ambar-Brasa-Steakhouse/" target="_blank" class="text-amber-500 text-[10px] font-bold uppercase tracking-widest hover:underline">Acessar Projeto 🚀</a>
                 </div>
                 <div class="card p-6 rounded-lg border-blue-600/30">
                     <h3 class="text-white font-bold mb-2">ONG Conecta</h3>
-                    <p class="text-gray-400 text-xs mb-4">Impacto social e conexão institucional.</p>
-                    <a href="https://joaohugorodrigues.github.io/ONG-CONECTA-/" target="_blank" class="text-blue-400 text-xs font-bold underline">Ver Projeto 🌍</a>
+                    <p class="text-gray-400 text-xs mb-4">Plataforma institucional de impacto social.</p>
+                    <a href="https://joaohugorodrigues.github.io/ONG-CONECTA-/" target="_blank" class="text-blue-400 text-[10px] font-bold uppercase tracking-widest hover:underline">Acessar Projeto 🌍</a>
                 </div>
             </div>
         </section>
 
-        <footer class="text-center text-gray-600 text-[10px] uppercase tracking-widest pt-8">
-            João Hugo Rodrigues © 2026
+        <div class="mt-16 p-8 bg-amber-900/5 border border-amber-900/20 rounded-xl text-center">
+            <h3 class="text-amber-500 font-bold mb-2">🕹️ Curte um desafio retrô?</h3>
+            <p class="text-xs text-gray-500 mb-6">Desenvolvi um clássico <b>Pixel Snake</b> em JS para exercitar lógica de programação.</p>
+            <a href="game.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-bold text-xs uppercase transition shadow-lg shadow-amber-900/20">
+                Jogar Pixel Snake 🐍
+            </a>
+        </div>
+
+        <footer class="text-center text-gray-700 text-[10px] uppercase tracking-[0.3em] pt-12">
+            João Hugo Rodrigues • ADS 2026 • São Paulo, SP
         </footer>
+
     </div>
 </body>
 </html>
