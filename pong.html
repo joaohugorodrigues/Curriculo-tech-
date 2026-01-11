@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>João Hugo | Pixel Pong</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0d1117; color: white; font-family: 'Poppins', sans-serif; overflow: hidden; touch-action: none; }
+        canvas { border: 4px solid #58a6ff; background-color: #161b22; max-width: 90vw; }
+        .ctrl-btn { background: #21262d; border: 2px solid #30363d; width: 80px; height: 80px; border-radius: 50%; font-size: 24px; color: #58a6ff; }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="text-center mb-4">
+        <h1 class="text-2xl font-bold text-blue-400 uppercase tracking-widest">Pixel Pong</h1>
+        <p id="score" class="text-xl font-mono">0 - 0</p>
+    </div>
+    
+    <canvas id="pongGame" width="600" height="400"></canvas>
+
+    <div class="mt-8 flex gap-10 md:hidden">
+        <button onpointerdown="movePlayer('UP')" onpointerup="stopPlayer()" class="ctrl-btn">▲</button>
+        <button onpointerdown="movePlayer('DOWN')" onpointerup="stopPlayer()" class="ctrl-btn">▼</button>
+    </div>
+
+    <div class="mt-8 text-center">
+        <a href="index.html" class="text-gray-500 text-xs font-bold uppercase underline">Voltar ao Currículo</a>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("pongGame");
+        const ctx = canvas.getContext("2d");
+
+        const paddleWidth = 10, paddleHeight = 80;
+        let playerY = (canvas.height - paddleHeight) / 2;
+        let computerY = (canvas.height - paddleHeight) / 2;
+        let ballX = canvas.width / 2, ballY = canvas.height / 2;
+        let ballSpeedX = 5, ballSpeedY = 5;
+        let playerMove = 0;
+        let playerScore = 0, computerScore = 0;
+
+        // Controles
+        document.addEventListener("keydown", (e) => {
+            if(e.key === "ArrowUp") playerMove = -8;
+            if(e.key === "ArrowDown") playerMove = 8;
+        });
+        document.addEventListener("keyup", () => playerMove = 0);
+
+        function movePlayer(dir) { playerMove = (dir === 'UP') ? -8 : 8; }
+        function stopPlayer() { playerMove = 0; }
+
+        function update() {
+            // Movimento do Jogador
+            playerY += playerMove;
+            if(playerY < 0) playerY = 0;
+            if(playerY > canvas.height - paddleHeight) playerY = canvas.height - paddleHeight;
+
+            // Movimento da IA (Simples)
+            let computerCenter = computerY + paddleHeight / 2;
+            if (computerCenter < ballY - 35) computerY += 6;
+            else if (computerCenter > ballY + 35) computerY -= 6;
+
+            // Movimento da Bola
+            ballX += ballSpeedX;
+            ballY += ballSpeedY;
+
+            // Colisão Paredes (Topo/Fundo)
+            if(ballY < 0 || ballY > canvas.height) ballSpeedY = -ballSpeedY;
+
+            // Colisão Raquetes
+            if (ballX < paddleWidth) {
+                if (ballY > playerY && ballY < playerY + paddleHeight) {
+                    ballSpeedX = -ballSpeedX;
+                    let deltaY = ballY - (playerY + paddleHeight / 2);
+                    ballSpeedY = deltaY * 0.3;
+                } else {
+                    computerScore++;
+                    resetBall();
+                }
+            }
+            if (ballX > canvas.width - paddleWidth) {
+                if (ballY > computerY && ballY < computerY + paddleHeight) {
+                    ballSpeedX = -ballSpeedX;
+                    let deltaY = ballY - (computerY + paddleHeight / 2);
+                    ballSpeedY = deltaY * 0.3;
+                } else {
+                    playerScore++;
+                    resetBall();
+                }
+            }
+
+            document.getElementById("score").innerText = `${playerScore} - ${computerScore}`;
+        }
+
+        function resetBall() {
+            ballX = canvas.width / 2; ballY = canvas.height / 2;
+            ballSpeedX = -ballSpeedX; ballSpeedY = 5;
+        }
+
+        function draw() {
+            ctx.fillStyle = "#161b22";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, playerY, paddleWidth, paddleHeight); // Player
+            ctx.fillRect(canvas.width - paddleWidth, computerY, paddleWidth, paddleHeight); // CPU
+            ctx.beginPath();
+            ctx.arc(ballX, ballY, 8, 0, Math.PI*2); // Bola
+            ctx.fill();
+
+            // Linha central
+            ctx.setLineDash([10, 10]);
+            ctx.strokeStyle = "#30363d";
+            ctx.moveTo(canvas.width/2, 0); ctx.lineTo(canvas.width/2, canvas.height);
+            ctx.stroke();
+        }
+
+        function gameLoop() { update(); draw(); requestAnimationFrame(gameLoop); }
+        gameLoop();
+    </script>
+</body>
+</html>
